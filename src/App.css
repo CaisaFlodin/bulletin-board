@@ -1,38 +1,101 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: url(assets/bulletin-board.jpg);
+  background-size: cover;
+  background-color: whitesmoke;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.board {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
+}
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  margin-top: 2.5rem;
+}
+.note {
+  color: #000;
+  display: block;
+  height: 15em;
+  width: 15em;
+  padding: 0.5em;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+  margin: 1em;
+  list-style: none;
+  font-family: "Reenie Beanie";
+  font-size: 1.5em;
+}
+.note:hover {
+  box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+}
+.note:first-child {
+  background: #ffc;
+  transform: rotate(5deg);
+  position: relative;
+  top: -10px;
 }
 
-.App-link {
-  color: #61dafb;
+.note:nth-child(even) {
+  background: #ccf;
+  transform: rotate(-3deg);
+  position: relative;
+  top: 6px;
+  list-style: none;
+}
+.note:nth-child(3) {
+  background: rgb(204, 255, 204);
+  transform: rotate(2deg);
+  position: relative;
+  top: -5px;
+}
+li {
+  font-family: "Indie Flower";
+  font-size: 1.1rem;
+  line-height: 28px;
+  margin: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.like-container {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  color: #f90c65;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1rem;
+  font-style: italic;
 }
+
+.like-icon,
+.liked-icon {
+  color: #f90c65;
+  font-size: 25px;
+  margin-right: 5px;
+}
+.like-icon:hover {
+  color: #f90c6793;
+}
+
+/* padding: 2px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  background: white;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.4); */
